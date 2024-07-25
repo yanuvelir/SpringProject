@@ -1,4 +1,4 @@
-Внедрение зависимостей должно проходить через конструктор -
+13 lesson - Внедрение зависимостей должно проходить через конструктор -
 //    @Autowired
 //    public MyController(Teacher teacher) {
 //
@@ -16,3 +16,8 @@
         public void setTeacher(Teacher teacher) {
             this.teacher = teacher;
         }
+
+ 14 lesson - в старых проектах могут использовать поле как зависимость
+
+    @Autowired
+    private Teacher teacher;

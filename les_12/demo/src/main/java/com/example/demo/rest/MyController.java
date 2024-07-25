@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
 
+    @Autowired
     private Teacher teacher;
 
 //    @Autowired
@@ -16,15 +17,14 @@ public class MyController {
 //        this.teacher = teacher;
 //    }
 
-    @Autowired
-    public void testMethod(Teacher teacher) {
-        this.teacher = teacher;
-    }
+//    @Autowired
+//    public void testMethod(Teacher teacher) {
+//        this.teacher = teacher;
+//    }
 
     @GetMapping("/homework")
     public String getHomeWork(){
 
-        //return teacher.getHomeWork();
         return teacher.getHomeWork();
     }
 
