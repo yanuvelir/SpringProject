@@ -12,11 +12,13 @@ public class MyController {
 
     @Autowired
     public MyController(Teacher teacher) {
+
         this.teacher = teacher;
     }
 
     @GetMapping("/homework")
     public String getHomeWork(){
+
         return teacher.getHomeWork();
     }
 
