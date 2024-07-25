@@ -10,15 +10,21 @@ public class MyController {
 
     private Teacher teacher;
 
-    @Autowired
-    public MyController(Teacher teacher) {
+//    @Autowired
+//    public MyController(Teacher teacher) {
+//
+//        this.teacher = teacher;
+//    }
 
+    @Autowired
+    public void testMethod(Teacher teacher) {
         this.teacher = teacher;
     }
 
     @GetMapping("/homework")
     public String getHomeWork(){
 
+        //return teacher.getHomeWork();
         return teacher.getHomeWork();
     }
 
