@@ -39,4 +39,9 @@
                     @Primary
                     public class HistoryTeacher implements Teacher
 
-     17th lesson -
+     17th lesson - added @Lazy annotation to resume start of a bean
+     @Component
+     @Lazy
+     public class MathTeacher implements Teacher {
+        Also we can use multiply Lazy annotation over the application.properties file
+        * spring.main.lazy-initialization=true *
