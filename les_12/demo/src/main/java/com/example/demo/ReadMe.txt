@@ -32,4 +32,11 @@
                         this.teacher = teacher;
                     }
 
-    16th lesson
+    16th lesson - to define the order of the bean we able to use @Primary annotation. @Primary annotation
+    is suitable to use with @Qualifier annotation,  but @Qualifier annotation is most priority
+     then @Primary.
+                    @Component
+                    @Primary
+                    public class HistoryTeacher implements Teacher
+
+     17th lesson -

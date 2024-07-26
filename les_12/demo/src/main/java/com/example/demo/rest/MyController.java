@@ -13,7 +13,7 @@ public class MyController {
     private Teacher teacher;
 
     @Autowired
-    public MyController(@Qualifier("laborTeacher") Teacher teacher) {
+    public MyController(@Qualifier("mathTeacher") Teacher teacher) {
 
         this.teacher = teacher;
     }
