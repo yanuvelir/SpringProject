@@ -45,3 +45,9 @@
      public class MathTeacher implements Teacher {
         Also we can use multiply Lazy annotation over the application.properties file
         * spring.main.lazy-initialization=true *
+
+     18th lesson - learned the @Scope annotation. It defines "singleTone" or "prototype"
+        method of a Bean creating. "Singleton" creates one bean, "Prototype" creates two beans
+
+        //@Scope("prototype") // first way to define the Scope
+        @Scope(ConfigurableListableBeanFactory.SCOPE_PROTOTYPE) //second way to define a @Scope

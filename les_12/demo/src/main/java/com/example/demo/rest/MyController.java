@@ -12,23 +12,29 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 
     private Teacher teacher;
+    private Teacher secondTeacher;
 
     @Autowired
-    public MyController(@Qualifier("mathTeacher") Teacher teacher) {
+    public MyController(@Qualifier("mathTeacher") Teacher teacher,
+                @Qualifier("mathTeacher") Teacher secondTeacher){
         System.out.println("Bean of the class" + this.getClass().getName());
 
         this.teacher = teacher;
+        this.secondTeacher = secondTeacher;
     }
-
-//    @Autowired
-//    public void testMethod(Teacher teacher) {
-//        this.teacher = teacher;
-//    }
 
     @GetMapping("/homework")
     public String getHomeWork(){
 
         return teacher.getHomeWork();
+    }
+
+    @GetMapping("/compTeachers")
+    public String compareTeachers(){
+
+        return "   First teacher - " + teacher + "<br>" +
+                " Second Teacher - " + secondTeacher + "<br>" +
+                "Compare Teachers - " + (teacher == secondTeacher);
     }
 
 }
