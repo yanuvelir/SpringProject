@@ -51,3 +51,6 @@
 
         //@Scope("prototype") // first way to define the Scope
         @Scope(ConfigurableListableBeanFactory.SCOPE_PROTOTYPE) //second way to define a @Scope
+
+     19th lesson - learned annotations @PostConstruct and @PreDestroy. @PostConstruct performs
+     immediately when constructor was initialised. @PreDestroy performs when Bean closed.
