@@ -74,3 +74,24 @@
          public void secondMethod(){
              System.out.println("secondMethod");
          }
+
+         lesson 21 - added config package and config Teacher file to organize/simplify structure
+         of the project. Also using the config file we are able to define a @Bean in directly in config file.
+
+         @Configuration
+         public class TeacherConfig {
+
+             @Bean("bestTeacher")
+             public Teacher englishTeacher(){
+                 return new EnglishTeacher();
+             }
+
+         Also using @Bean("bestTeacher") we able to redefine  the name bean's name. For correct redefine
+         necessary to change the bean's name in the MyController class.
+
+         @Autowired
+             public MyController(@Qualifier("bestTeacher") Teacher teacher){
+                 System.out.println("Bean of the class" + this.getClass().getName());
+
+                 this.teacher = teacher;
+             }

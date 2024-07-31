@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 //@Lazy
 public class HistoryTeacher implements Teacher{
     public HistoryTeacher() {
-        System.out.println("Bean of the class" + this.getClass().getSimpleName());
+        System.out.println("Bean of the class - " + this.getClass().getSimpleName());
     }
 
     @Override

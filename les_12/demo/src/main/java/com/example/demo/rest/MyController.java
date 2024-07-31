@@ -14,7 +14,7 @@ public class MyController {
     private Teacher teacher;
 
     @Autowired
-    public MyController(@Qualifier("mathTeacher") Teacher teacher){
+    public MyController(@Qualifier("bestTeacher") Teacher teacher){
         System.out.println("Bean of the class" + this.getClass().getName());
 
         this.teacher = teacher;
