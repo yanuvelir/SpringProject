@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class MathTeacher implements Teacher {
     public MathTeacher() {
         System.out.println("Bean of the class" + this.getClass().getSimpleName());

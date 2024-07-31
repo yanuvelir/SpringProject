@@ -54,3 +54,23 @@
 
      19th lesson - learned annotations @PostConstruct and @PreDestroy. @PostConstruct performs
      immediately when constructor was initialised. @PreDestroy performs when Bean closed.
+
+     20 lesson - When a @Scope("prototype"), then @PreDestroy annotation does not work. It works
+      when @Scope("singleton").
+
+     @Component
+     @Scope("prototype")
+     public class MathTeacher implements Teacher {
+         public MathTeacher() {
+             System.out.println("Bean of the class" + this.getClass().getSimpleName());
+         }
+
+         @PostConstruct
+         public void firstMethod(){
+             System.out.println("firstMethod");
+         }
+
+         @PreDestroy
+         public void secondMethod(){
+             System.out.println("secondMethod");
+         }
